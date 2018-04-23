@@ -1,0 +1,6 @@
+flask
+flask-httpauth
+virtualenv
+flask-sqlalchemy
+flask-migrate
+flask-cors
