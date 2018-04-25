@@ -5,7 +5,7 @@ before_install:
   npm install
 install:
  - "pip install pytest pytest-coverage python-coveralls"
- - "pip install -r wep_app/requirements.txt"
+ - "pip install -r web_app/requirements.txt"
 script: python -m pytest tests/ --cov=.
 after_success:
   - git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
