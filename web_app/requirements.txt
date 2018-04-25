@@ -4,3 +4,4 @@ virtualenv
 flask-sqlalchemy
 flask-migrate
 flask-cors
+pymongo
