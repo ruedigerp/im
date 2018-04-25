@@ -1,0 +1,23 @@
+language: python
+python:
+ - "3.6"
+before_install:
+  npm install
+install:
+ - "pip install pytest pytest-coverage python-coveralls"
+ - "pip install -r wep_app/requirements.txt"
+script: python -m pytest tests/ --cov=.
+after_success:
+  - git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+  - git fetch --tags
+  - npm run semantic-release
+  - coveralls
+addons:
+  apt:
+    packages:
+    - build-essential
+    - fakeroot
+    - git
+    - libsecret-1-dev
+# notifications:
+#      webhooks: https://chat.quakk.de/hooks/2DxYoWK8whui6ArMk/tZxxYitQ5ZyPKcYoLJyFSyPCF2qSjrpW4grkDhYJjDtfZhas
