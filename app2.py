@@ -1,5 +1,6 @@
 #!flask/bin/python
 # Version: 1.1
+# Author: Rüdiger Küpper 
 from flask import Flask, jsonify, abort, request, make_response, url_for
 from flask_httpauth import HTTPBasicAuth
 import json
