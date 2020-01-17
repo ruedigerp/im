@@ -1,5 +1,5 @@
 #!flask/bin/python
-# Version: 1.2
+# Version: 1.3
 from flask import Flask, jsonify, abort, request, make_response, url_for
 from flask_httpauth import HTTPBasicAuth
 import json
